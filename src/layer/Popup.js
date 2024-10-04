@@ -273,7 +273,7 @@ export const Popup = DivOverlay.extend({
 		    marginBottom = parseInt(getComputedStyle(this._container).marginBottom, 10) || 0,
 		    containerHeight = this._container.offsetHeight + marginBottom,
 		    containerWidth = this._containerWidth,
-		    layerPos = new Point(this._containerLeft, -containerHeight - this._containerBottom);
+		    layerPos = new Point(this._containerLeft, this._containerTop);
 
 		layerPos._add(DomUtil.getPosition(this._container));
 

@@ -305,11 +305,11 @@ export const DivOverlay = Layer.extend({
 			offset = offset.add(pos).add(anchor);
 		}
 
-		const bottom = this._containerBottom = -offset.y,
+		const top = this._containerTop = offset.y,
 		    left = this._containerLeft = -Math.round(this._containerWidth / 2) + offset.x;
 
-		// bottom position the overlay in case the height of the overlay changes (images loading etc)
-		this._container.style.bottom = `${bottom}px`;
+		// top position the overlay in case the height of the overlay changes (images loading etc)
+		this._container.style.top = `${top}px`;
 		this._container.style.left = `${left}px`;
 	},
 
